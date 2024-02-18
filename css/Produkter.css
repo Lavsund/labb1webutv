@@ -1,0 +1,15 @@
+.card-img-top {
+  max-width: 10%;
+  height: auto;
+}
+.logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+body {
+  background-color: #8eba38;
+  font-family: fantasy;
+}
+body main .pTag {
+  color: rgb(29, 31, 59);
+  font-family: fantasy;
+}
