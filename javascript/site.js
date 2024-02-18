@@ -216,7 +216,10 @@ function displayCart() {
 
 function removeFromCart(index) {
   cart.splice(index, 1);
-
+  const savedCart = sessionStorage.getItem("cart");
+  cartParsed = JSON.parse(savedCart);
+  cartParsed.splice(index, 1);
+  sessionStorage.setItem("cart", JSON.stringify(cartParsed));
   saveCart;
   displayCart();
   updateTotalOnPage();
