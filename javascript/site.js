@@ -179,18 +179,19 @@ function saveCart() {
 }
 
 function loadCart() {
-  const savedCart = sessionStorage.getItem("cart");
+  /*   const savedCart = sessionStorage.getItem("cart");
   if (savedCart) {
     cart = JSON.parse(savedCart);
-    displayCart();
-    updateTotalOnPage();
-  }
+  
+  } */
+  displayCart();
+  updateTotalOnPage();
 }
 
 function addToCart(item) {
   cart.push(item);
 
-  saveCart();
+  //saveCart();
   displayCart();
   updateTotalOnPage();
   console.log("Vara tillagd i varukorgen:", item);
@@ -216,10 +217,10 @@ function displayCart() {
 
 function removeFromCart(index) {
   cart.splice(index, 1);
-  const savedCart = sessionStorage.getItem("cart");
+  /*   const savedCart = sessionStorage.getItem("cart");
   cartParsed = JSON.parse(savedCart);
   cartParsed.splice(index, 1);
-  sessionStorage.setItem("cart", JSON.stringify(cartParsed));
+  sessionStorage.setItem("cart", JSON.stringify(cartParsed)); */
   saveCart;
   displayCart();
   updateTotalOnPage();
